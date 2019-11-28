@@ -10,11 +10,12 @@
 public struct ServerError: Decodable {
 
     public struct PresentationData: Decodable {
-        public let title    : String
-        public let message  : String
+        public var title    : String
+        public var message  : String
     }
 
-    public let domain           : String = ""
-    public let details          : String = ""
-    public let presentationData : PresentationData = PresentationData(title: "", message: "")
+    public var domain           : String
+    public var details          : String
+    public var presentationData : PresentationData
+    
 }
